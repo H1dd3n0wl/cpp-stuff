@@ -57,7 +57,7 @@ def main():
 
     append_cmake = Path.cwd().joinpath("CMakeLists.txt").open("a")
     append_cmake.write(
-        'add_subdirectory("{}")'.format(
+        '\nadd_subdirectory("{}")'.format(
             "algorithms/" + args.destination + "/" + args.name
         )
     )
