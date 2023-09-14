@@ -1,6 +1,6 @@
 #include <vector>
 
-const int MAXN = 1e5 + 5;
+const int MAXN = 1e3 + 5;
 
 std::vector<std::vector<int>> g(MAXN);
 std::vector<bool> used(MAXN, false);

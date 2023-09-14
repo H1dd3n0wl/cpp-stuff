@@ -1,8 +1,9 @@
 #include <vector>
+#include <algorithm>
 
-const int MAXN = 1e5 + 5;
-int n;
-std::vector<std::vector<int>> g(MAXN, std::vector<int>(MAXN));
+const int MAXN = 1e3 + 5;
+int n = MAXN;
+std::vector<std::vector<int>> g(MAXN);
 std::vector<bool> used(MAXN, false);
 std::vector<int> ans;
 
