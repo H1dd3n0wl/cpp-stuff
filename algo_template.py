@@ -35,7 +35,7 @@ def main():
             "target_link_libraries({} ${{GTEST_LIBRARIES}} pthread)\n\n".format(
                 args.name
             ),
-            "add_test(NAME {}_test COMMAND {})\n".format(args.name, args.name),
+            "add_test(NAME {}_test COMMAND {})".format(args.name, args.name),
         ]
     )
     cmakelist.close()
