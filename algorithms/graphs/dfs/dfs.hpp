@@ -1,9 +1,9 @@
 #include <vector>
 
-const int MAX_N = 1e5 + 5;
+const int MAXN = 1e5 + 5;
 
-std::vector<std::vector<int>> g(MAX_N);
-std::vector<bool> used(MAX_N, false);
+std::vector<std::vector<int>> g(MAXN);
+std::vector<bool> used(MAXN, false);
 
 // simple dfs that calls itself from all ajacent nodes of current node
 void dfs(int v) {
