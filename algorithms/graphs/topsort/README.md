@@ -1,0 +1,3 @@
+## Algorithm description
+
+Topological sort of a directed graph is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering. So we are going through the graph via dfs and after we checked all of the neibourghs of a vertex we push tis vertex to the answer order. After we checked all of the vertices we reverse the order of our saved answer.

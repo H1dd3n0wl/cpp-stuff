@@ -55,6 +55,10 @@ def main():
     )
     test_file.close()
 
+    readme = path.joinpath("README.md").open("w")
+    readme.write("## Algorithm description")
+    readme.close()
+
     append_cmake = Path.cwd().joinpath("CMakeLists.txt").open("a")
     append_cmake.write(
         '\nadd_subdirectory("{}")'.format(
