@@ -1,10 +1,8 @@
 #include <vector>
 #include <algorithm>
 
-const int MAXN = 1e3 + 5;
-int n = MAXN;
-std::vector<std::vector<int>> g(MAXN);
-std::vector<bool> used(MAXN, false);
+std::vector<std::vector<int>> g;
+std::vector<bool> used;
 std::vector<int> ans;
 
 void dfs(int v) {
@@ -18,12 +16,23 @@ void dfs(int v) {
 }
 
 void topological_sort() {
-    used.assign(n, false);
+    used.assign(g.size(), false);
     ans.clear();
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < (int)g.size(); ++i) {
         if (!used[i]) {
             dfs(i);
         }
     }
     std::reverse(std::begin(ans), std::end(ans));
+}
+
+// n is count of vertexes and m is count of edges
+void fill_graph(int n, int m) {
+    g.resize(n);
+    for (int i = 0; i < m; ++i) {
+        int l, r;
+        std::cin >> l >> r;
+        g[l].push_back(r);
+        g[r].push_back(l);
+    }
 }

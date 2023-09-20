@@ -57,13 +57,14 @@ void scc() {
     }
 }
 
-void fill_graph(int n) {
+// n is count of vertexes and m is count of edges
+void fill_graph(int n, int m) {
     g.resize(n);
     r.resize(n);
     reverse_graph();
     used.assign(n, false);
     components.resize(n);
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < m; ++i) {
         int l, r;
         std::cin >> l >> r;
     }
