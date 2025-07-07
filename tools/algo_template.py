@@ -10,9 +10,7 @@ def main():
         choices=["graphs", "ds", "strings", "math"],
         help="folder where to create the algo",
     )
-    parser.add_argument(
-        "name", help="the name of the algo, also the name of the folder where it"
-    )
+    parser.add_argument("name", help="the name of the algo, also the name of the folder where it")
 
     args = parser.parse_args()
 
@@ -32,9 +30,7 @@ def main():
     cmakelist.writelines(
         [
             "add_executable({} test_{}.cpp)\n".format(args.name, args.name),
-            "target_link_libraries({} ${{GTEST_LIBRARIES}} pthread)\n\n".format(
-                args.name
-            ),
+            "target_link_libraries({} gtest_main)\n\n".format(args.name),
             "add_test(NAME {}_test COMMAND {})".format(args.name, args.name),
         ]
     )
@@ -58,14 +54,6 @@ def main():
     readme = path.joinpath("README.md").open("w")
     readme.write("## Algorithm description")
     readme.close()
-
-    append_cmake = Path.cwd().joinpath("CMakeLists.txt").open("a")
-    append_cmake.write(
-        '\nadd_subdirectory("{}")'.format(
-            "algorithms/" + args.destination + "/" + args.name
-        )
-    )
-    append_cmake.close()
 
 
 main()
