@@ -1,4 +1,4 @@
 add_executable(extended_gcd test_extended_gcd.cpp)
-target_link_libraries(extended_gcd ${GTEST_LIBRARIES} pthread)
+target_link_libraries(extended_gcd gtest_main)
 
 add_test(NAME extended_gcd_test COMMAND extended_gcd)
