@@ -1,5 +1,5 @@
-#include <vector>
 #include <algorithm>
+#include <vector>
 
 std::vector<std::vector<int>> g;
 std::vector<bool> used;

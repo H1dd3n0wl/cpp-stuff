@@ -21,7 +21,7 @@ void build() {
 
 bool isPrime(int p) { return prime[p]; }
 
-}  // namespace classic_erat
+} // namespace classic_erat
 
 namespace linear_erat {
 
@@ -54,12 +54,12 @@ std::vector<int> factorize(int n) {
     return res;
 }
 
-}  // namespace linear_erat
+} // namespace linear_erat
 
 namespace block_erat {
 
-const int SQRT_N = 1e5;  // sqrt of input size
-const int S = 1e4;       // size of block
+const int SQRT_N = 1e5; // sqrt of input size
+const int S = 1e4;      // size of block
 
 std::array<bool, SQRT_N> nprime;
 std::array<bool, S> bl;
@@ -97,4 +97,4 @@ void build(int n) {
     }
 }
 
-}  // namespace block_erat
+} // namespace block_erat

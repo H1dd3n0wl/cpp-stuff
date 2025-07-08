@@ -1,7 +1,6 @@
 #include <array>
 
-template <std::size_t N>
-class FenwickTree {
+template <std::size_t N> class FenwickTree {
 private:
     std::array<long long, N> t_;
 
@@ -28,7 +27,5 @@ public:
         }
     }
 
-    FenwickTree() {
-        t_.fill(0);
-    }
+    FenwickTree() { t_.fill(0); }
 };

@@ -1,7 +1,7 @@
 #include <string>
 #include <vector>
 
-std::vector<int> z_func(std::string &s) {
+std::vector<int> z_function(std::string& s) {
     std::vector<int> res(s.length());
     int l = 0;
     int r = 0;

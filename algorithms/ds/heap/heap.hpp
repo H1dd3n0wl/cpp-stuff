@@ -1,6 +1,6 @@
 #include <vector>
 
-//min-heap
+// min-heap
 class Heap {
 
     const static int NMAX = 1e6 + 5;
@@ -10,9 +10,7 @@ class Heap {
     int n;
 
 public:
-    int get_min() {
-        return a[0];
-    }
+    int get_min() { return a[0]; }
 
     void remove_min() {
         // sift down after deleting mininum
@@ -45,12 +43,10 @@ public:
             j = (j - 1) / 2;
         }
     }
-
 };
 
-
 // O(n), sifting down from the end of an array
-void heapify(std::vector<int> &a) {
+void heapify(std::vector<int>& a) {
     int n = (int)a.size();
     for (int k = n / 2; k >= 0; --k) {
         int i = k;

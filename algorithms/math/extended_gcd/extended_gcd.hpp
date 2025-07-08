@@ -1,6 +1,6 @@
 #include <cmath>
 
-int e_gcd(int a, int b, int &x, int &y) {
+int e_gcd(int a, int b, int& x, int& y) {
     if (a == 0) {
         x = 0;
         y = 1;
@@ -20,7 +20,7 @@ int e_gcd(int a, int b, int &x, int &y) {
 
 namespace diofantine_equation {
 
-bool find_any_solution(int a, int b, int c, int &x0, int &y0, int &g) {
+bool find_any_solution(int a, int b, int c, int& x0, int& y0, int& g) {
     g = e_gcd(std::abs(a), std::abs(b), x0, y0);
     if (c % g != 0) return false;
     x0 *= c / g;
@@ -30,12 +30,13 @@ bool find_any_solution(int a, int b, int c, int &x0, int &y0, int &g) {
     return true;
 }
 
-void shift_solution(int &x, int &y, int a, int b, int cnt) {
+void shift_solution(int& x, int& y, int a, int b, int cnt) {
     x += cnt * b;
     y -= cnt * a;
 }
 
-int find_all_solutions(int a, int b, int c, int minx, int maxx, int miny, int maxy) {
+int find_all_solutions(int a, int b, int c, int minx, int maxx, int miny,
+                       int maxy) {
     int x, y, g;
     if (!find_any_solution(a, b, c, x, y, g)) {
         return 0;
@@ -71,4 +72,4 @@ int find_all_solutions(int a, int b, int c, int minx, int maxx, int miny, int ma
     return (rx - lx) / abs(b) + 1;
 }
 
-}  // namespace diofantine_equation
+} // namespace diofantine_equation

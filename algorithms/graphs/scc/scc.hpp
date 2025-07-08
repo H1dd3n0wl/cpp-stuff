@@ -78,7 +78,8 @@ void print_comps() {
     }
     for (int i = 0; i < t; ++i) {
         std::cout << i << "th component:\n";
-        std::copy(std::begin(c[i]), std::end(c[i]), std::ostream_iterator<int>{std::cout, " "});
+        std::copy(std::begin(c[i]), std::end(c[i]),
+                  std::ostream_iterator<int>{std::cout, " "});
         std::cout << '\n';
     }
 }
