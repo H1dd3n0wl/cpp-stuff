@@ -1,3 +1,5 @@
-## Algorithm description
+## Описание алгоритма
 
-BFS, breadth-first search is an algorithm similar to [dfs](../dfs/README.md) for traversal of graph. The main difference from the dfs is that bfs explores all nodes at the present depth prior to moving on to the nodes at the next depth level. Usually bfs uses non-recursive implementation with the queue as extra memory.
+Поиск в ширину (BFS) — алгоритм, аналогичный DFS для обхода графа. Основное отличие от DFS заключается в том, что BFS сначала исследует все узлы на текущей глубине, прежде чем перейти к узлам на следующем уровне глубины. Обычно BFS использует нерекурсивную реализацию, используя очередь в качестве дополнительной памяти.
+
+Классическая реализация BFS предназначена для поиска путей от заданной вершины до всех остальных на невзвешенном графе.

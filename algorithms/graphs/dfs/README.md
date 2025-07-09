@@ -1,3 +1,3 @@
-## Algorithm description
+## Описание алгоритма
 
-DFS, depth-first search is an algorithm for traversing or searching tree or graph data structures. it starts from some node and goes as far as possible along each branch before backtracking. Here recursive dfs is presented. Non-recursive solution will use stack as extra memory.
+Поиск в глубину (DFS) — это алгоритм обхода или поиска по древовидным или графовым структурам данных. Он начинается с некоторого узла и проходит максимально возможное расстояние по каждой ветви, прежде чем вернуться назад. Здесь представлен рекурсивный поиск в глубину. Нерекурсивное решение будет использовать стек в качестве дополнительной памяти.
